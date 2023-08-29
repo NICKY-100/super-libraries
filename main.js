@@ -1,24 +1,37 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import SuperBox from './SuperBox.js';
+import SuperGrid from './SuperGrid.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const grid = new SuperGrid()
+grid.appendTo(document.body)
+grid.alignment('center')
 
-setupCounter(document.querySelector('#counter'))
+
+
+
+
+
+// first box created in div red
+const redBox = new SuperBox('div')
+console.dir(redBox.element.style)
+
+redBox.color('red')
+// append redbox to grid element
+redBox.appendTo(grid.element);
+redBox.size('100px', '100px');
+
+//box created in div yellow
+const yellowBox = new SuperBox('div', 'yellow', '100px', '100px')
+yellowBox.appendTo(grid.element);
+
+//extra box for exercise(BLUE)
+const blueBox = new SuperBox('div')
+console.dir(blueBox.element.style)
+
+blueBox.color('blue')
+
+blueBox.appendTo(grid.element);
+blueBox.size('100px', '100px');
+
+
+
