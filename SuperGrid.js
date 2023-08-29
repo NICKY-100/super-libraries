@@ -4,7 +4,9 @@ import SuperElement from "./SuperElement.js"
 */
 // superGrid function
 function SuperGrid({
-    tag = 'div'
+    tag = 'div',
+    height = '200px'
+
 } = {}) {
     //
     /**
@@ -16,6 +18,7 @@ function SuperGrid({
 
 
     this.element.style.display = 'flex'
+    this.element.style.height = height
 }
 //create supergrid object
 SuperGrid.prototype = Object.create(SuperElement.prototype)

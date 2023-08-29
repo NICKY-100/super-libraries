@@ -1,14 +1,10 @@
-import './style.css'
+
 import SuperBox from './SuperBox.js';
 import SuperGrid from './SuperGrid.js';
 
-const grid = new SuperGrid()
+const grid = new SuperGrid({ height: '200px' })
 grid.appendTo(document.body)
-grid.alignment('center')
-
-
-
-
+grid.alignment('top')
 
 
 // first box created in div red
