@@ -8,14 +8,11 @@ function SuperGrid({
     height = '200px'
 
 } = {}) {
-    //
+
     /**
     //@ param- append parent data to child
     */
-
-
     SuperElement.call(this, tag)
-
 
     this.element.style.display = 'flex'
     this.element.style.height = height
@@ -27,12 +24,15 @@ SuperGrid.prototype.alignment = function (alignment) {
     if (alignment === 'center') {
         this.element.style.justifyContent = 'center'
         this.element.style.alignItems = 'center'
-
+        //alignment top using justify content
     } else if (alignment === 'top') {
         this.element.style.alignItems = 'start'
-
+        //alignment right using justify content
     } else if (alignment === "right") {
         this.element.style.justifyContent = "right"
+        //alignment left using justify content
+    } else if (alignment === "left") {
+        this.element.style.justifyContent = "left"
     }
 }
 export default SuperGrid
