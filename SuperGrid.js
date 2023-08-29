@@ -25,7 +25,7 @@ SuperGrid.prototype.alignment = function (alignment) {
         this.element.style.justifyContent = 'center'
         this.element.style.alignItems = 'center'
 
-    } else if (alignment === 'vcenter') {
+    } else if (alignment === 'top') {
         this.element.style.alignItems = 'center'
 
     }
