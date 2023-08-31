@@ -33,8 +33,7 @@ SuperGrid.prototype.alignment = function (alignment) {
         //alignment left using justify content
     } else if (alignment === "left") {
         this.element.style.justifyContent = "left"
-    } else if (alignment === "end") {
-        this.element.style.justifyContent = "end"
+
     }
 }
 export default SuperGrid
