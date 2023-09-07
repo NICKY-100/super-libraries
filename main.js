@@ -3,9 +3,10 @@ import SuperBox from './SuperBox.js';
 import SuperGrid from './SuperGrid.js';
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top
-const grid = new SuperGrid({ height: '200px' })
+const grid = new SuperGrid({ height: '100vh' })
 grid.appendTo(document.body)
-grid.alignment('top')
+grid.alignment('bottomRight')
+
 
 // redBox created in div 
 const redBox = new SuperBox('div')
