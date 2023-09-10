@@ -1,12 +1,12 @@
 //import SuperBox and SuperGrid from respective js files.
 import SuperBox from './SuperBox.js';
 import SuperGrid from './SuperGrid.js';
+
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top
 const grid = new SuperGrid({ height: '100vh' })
 grid.appendTo(document.body)
 grid.alignment('bottomRight')
-
 
 // redBox created in div 
 const redBox = new SuperBox('div')
@@ -31,5 +31,13 @@ blueBox.color('blue')
 blueBox.appendTo(grid.element);
 blueBox.size('100px', '100px');
 
+// submit button  to create new button
+const submit = new SuperButton('submit', 'submit')
+const form = new SuperForm()
 
+submit.appendTo(form.element)
+form.appendTo(document.body)
+form.submit(() => {
+    console.log("hello")
+})
 
