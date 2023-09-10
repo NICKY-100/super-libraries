@@ -1,4 +1,5 @@
 import SuperElement from "./SuperElement.js"
+
 function SuperEvent(tag) {
     SuperElement.call(this, tag)
 }
