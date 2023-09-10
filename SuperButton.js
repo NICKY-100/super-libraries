@@ -1,8 +1,11 @@
 import SuperElement from "./SuperElement.js"
-SuperButton.prototype = object.create(SuperElement.prototype)
 
-function SuperEvent(tag) {
-    SuperElement.call(this, tag)
+function SuperButton(type, text) {
+    SuperElement.call(this, 'button')
+
+    this.element.type = type
+    this.element.innerText = text
 }
+SuperButton.prototype = object.create(SuperElement.prototype)
 
 export default SuperButton
