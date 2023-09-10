@@ -1,4 +1,7 @@
 import SuperElement from "./SuperElement.js"
+function SuperEvent(tag) {
+    SuperElement.call(this, tag)
+}
 SuperEvent.prototype = object.create(SuperElement.prototype)
 
 SuperEvent.prototype.submit = function (callback) {
