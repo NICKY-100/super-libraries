@@ -33,16 +33,18 @@ SuperGrid.prototype.alignment = function (alignment) {
         //alignment left using justify content
     } else if (alignment === "left") {
         this.element.style.justifyContent = "left"
-
+        //justify content left
     } else if (alignment === "bottom") {
         this.element.style.alignItems = "end"
-
+        //align items end
     } else if (alignment === "bottomRight") {
         this.element.style.alignItems = "end"
         this.element.style.justifyContent = "right"
+        //justify content right
     } else if (alignment === "bottomLeft") {
         this.element.style.alignItems = "end"
         this.element.style.justifyContent = "left"
+        // justify content left
     } else if (alignment === "bottomCenter") {
         this.element.style.alignItems = "end"
         this.element.style.justifyContent = "center"

@@ -8,4 +8,4 @@ function SuperButton(type, text) {
 }
 SuperButton.prototype = object.create(SuperElement.prototype)
 
-export default SuperButton
+export default SuperButton;
