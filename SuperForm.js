@@ -3,7 +3,7 @@ import SuperEvent from "./SuperEvent.js"
 function SuperForm() {
     SuperEvent.call(this, 'form')
 }
-SuperForm.prototype = object.create(SuperEvent.prototype)
+SuperForm.prototype = Object.create(SuperEvent.prototype)
 
 // const form = new SuperForm()
 
