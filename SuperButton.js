@@ -6,6 +6,6 @@ function SuperButton(type, text) {
     this.element.type = type
     this.element.innerText = text
 }
-SuperButton.prototype = object.create(SuperElement.prototype)
+SuperButton.prototype = Object.create(SuperElement.prototype)
 
 export default SuperButton;
