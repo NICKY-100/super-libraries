@@ -48,6 +48,9 @@ SuperGrid.prototype.alignment = function (alignment) {
     } else if (alignment === "bottomCenter") {
         this.element.style.alignItems = "end"
         this.element.style.justifyContent = "center"
+
+    } else if (alignment === "stretch") {
+        this.element.style.alignItems = "stretch"
     }
 }
 export default SuperGrid
