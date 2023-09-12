@@ -7,4 +7,4 @@ SuperForm.prototype = object.create(SuperEvent.prototype)
 
 
 
-export default SuperForm
+export default SuperForm;

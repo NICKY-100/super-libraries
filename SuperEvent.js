@@ -11,4 +11,4 @@ SuperEvent.prototype.submit = function (callback) {
         callback(e)
     })
 }
-export default SuperEvent
+export default SuperEvent;
