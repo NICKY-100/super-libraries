@@ -1,6 +1,7 @@
 //import SuperBox and SuperGrid from respective js files.
 import SuperBox from './SuperBox.js';
 import SuperGrid from './SuperGrid.js';
+import SuperForm from './SuperForm.js';
 
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top
