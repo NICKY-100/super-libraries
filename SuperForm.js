@@ -5,6 +5,6 @@ function SuperForm() {
 }
 SuperForm.prototype = object.create(SuperEvent.prototype)
 
-
+// const form = new SuperForm()
 
 export default SuperForm;

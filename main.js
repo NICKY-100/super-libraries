@@ -31,7 +31,7 @@ blueBox.color('blue')
 blueBox.appendTo(grid.element);
 blueBox.size('100px', '100px');
 
-// submit button  to create new button
+// submit button to create new button
 const submit = new SuperButton('submit', 'submit')
 const form = new SuperForm()
 
