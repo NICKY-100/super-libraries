@@ -1,4 +1,4 @@
-import SuperElement from "./SuperElement.js"
+import SuperEvent from "./SuperEvent.js"
 // create superform function
 function SuperForm() {
     SuperEvent.call(this, 'form')
