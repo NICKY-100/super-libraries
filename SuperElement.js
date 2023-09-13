@@ -1,4 +1,5 @@
 // parent Constructor
+
 function SuperElement(tag) {
     this.element = document.createElement(tag);
 }

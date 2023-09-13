@@ -3,6 +3,8 @@ import SuperOption from "./SuperOption.js";
 
 /**
  * @param {string} select Somebody's name.
+ * @param SuperElement is called with parameters this and select
+ * @param a new superOption is created with 
  */
 function SuperSelect() {
     SuperElement.call(this, 'select')
