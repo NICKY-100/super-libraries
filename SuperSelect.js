@@ -10,7 +10,8 @@ function SuperSelect() {
     SuperElement.call(this, 'select')
     for (let i = 0; i < SuperOption.length; i++) {
 
-        const option = new SuperOption('color', "2"['blue', 'six'])
+        const option = new SuperOption('color', '2', ['blue', 'six'])
+        // const option1 = new SuperOption('color', '3', ['black', 'five'])
         option.appendTo(this.element)
     }
 }
