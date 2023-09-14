@@ -8,14 +8,14 @@ import SuperOption from "./SuperOption.js";
  */
 function SuperSelect() {
     SuperElement.call(this, 'select')
-    const option = new SuperOption('option 1', 'name'['boxColor', 'green'])
+    const option = new SuperOption('blue', 'box'['boxColor', 'two'])
 
     //const option2 = new SuperOption('box2', 'name'['boxColor', 'blue'])
 
     for (let i = 0; i < SuperOption.length; i++) {
 
     }
-    option.appendTo(grid.element)
+    option.appendTo(this.element)
 }
 
 export default SuperSelect;
