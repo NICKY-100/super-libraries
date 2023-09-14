@@ -1,5 +1,12 @@
 import SuperElement from "./SuperElement.js";
 // child constructor
+/**
+ * @param {Parameters} constructor function
+ * @param SuperElement is called with parameters color, size
+ * @param element type, and innertext
+ * @param an create superElement.ptototype
+ * @param SuperBox is exported by default
+ */
 function SuperBox(tag, color, width, height) {
     // append parent data to child
     SuperElement.call(this, tag);
