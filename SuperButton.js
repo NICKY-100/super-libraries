@@ -1,8 +1,10 @@
 import SuperElement from "./SuperElement.js"
 /**
- *  @param {string} select Somebody's name.
+ *  @param {string} button and this,
  * @param SuperButton is called with parameters this and select
+ * @param element type, and innertext
  * @param an object is created 
+ * @param superbutton is exported by default
  */
 function SuperButton(type, text) {
     SuperElement.call(this, 'button')
