@@ -3,6 +3,7 @@ import SuperBox from './SuperBox.js';
 import SuperGrid from './SuperGrid.js';
 import SuperForm from './SuperForm.js';
 import SuperButton from './SuperButton.js';
+import SuperSelect from './SuperSelect.js';
 
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top
@@ -33,10 +34,16 @@ blueBox.color('blue')
 blueBox.appendTo(grid.element);
 blueBox.size('100px', '100px');
 
+// create a new superselect 
+const select = new SuperSelect()
+
+
+
 // submit button to create new button
+// create a new superForm and appending to form
 const submit = new SuperButton('submit', 'submit')
 const form = new SuperForm()
-
+select.appendTo(form.element)
 submit.appendTo(form.element)
 form.appendTo(document.body)
 form.submit(() => {

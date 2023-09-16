@@ -10,5 +10,6 @@ function SuperOption(value, text) {
     this.element.value = value
     this.element.innerText = text
 }
+SuperOption.prototype = Object.create(SuperElement.prototype)
 
 export default SuperOption;
