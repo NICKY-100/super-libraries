@@ -6,7 +6,7 @@ import SuperOption from "./SuperOption.js";
  * @param SuperElement is called with parameters this and select
  * @param a new superOption is created with 
  */
-function SuperSelect(options = [['color', 'box'], ['one', 'small']]) {
+function SuperSelect(options = [['color', 'box1'], ['one', 'box2']]) {
     SuperElement.call(this, 'select')
     for (let i = 0; i < options.length; i++) {
 
