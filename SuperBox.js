@@ -1,25 +1,30 @@
 import SuperElement from "./SuperElement.js";
 // child constructor
 /**
- * @param {object} SuperBox with parameters tag, color, width, height
- * @param {Object} type, and innertext
- * @param SuperBox is exported by default
- * 
-@param SuperElement — function is created with one parameter (tag)
-@param element — is created
-@param superElement — is exported by default
+ * create a box of a specific color
+ * @constructor
+ * @extends SuperElement
+ * @param {string} tag - name of the HTML tag.
+ * @param {string} backgroundColor -  the background colour of element.
+ * @param {string} width - width of element
+ * @param {string} height - height of element
+ * @example 
+ * const box = new SuperBox('div', 'red', '100px', '100px');
  */
-function SuperBox(tag, color, width, height) {
+function SuperBox(tag, backgroundColor, width, height) {
     // append parent data to child
     SuperElement.call(this, tag);
-    this.color(color);
+    this.backgroundColor(backgroundColor);
     this.size(width, height);
 }
 // append parent prototypes to child constructor
 SuperBox.prototype = Object.create(SuperElement.prototype);
 
-// add new prototypes to child
-SuperBox.prototype.color = function (colour) {
+/**
+ * change background color 
+ * @param {string} colour - background color 
+ */
+SuperBox.prototype.backgroundColor = function (colour) {
     this.element.style.backgroundColor = colour
 }
 //size function with dimensions

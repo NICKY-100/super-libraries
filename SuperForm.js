@@ -1,10 +1,13 @@
 import SuperEvent from "./SuperEvent.js"
-// create superform function
+
+/**
+ * @ param {string}
+ * 
+ */
 function SuperForm() {
     SuperEvent.call(this, 'form')
 }
 SuperForm.prototype = Object.create(SuperEvent.prototype)
 
-// const form = new SuperForm()
 
 export default SuperForm;

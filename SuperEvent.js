@@ -1,5 +1,8 @@
 import SuperElement from "./SuperElement.js"
-
+/**
+ * 
+ * @param {object} tag 
+ */
 function SuperEvent(tag) {
     SuperElement.call(this, tag)
 }
