@@ -1,8 +1,11 @@
 // parent Constructor
 /**
- * @param SuperElement function is created with one parameter (tag)
- * @param element is created
- * @param superElement is exported by default
+ * create an element of any specific type 
+ * @constructor
+ * @extends appendTo
+ * @param {string} tag - name of a HTML tag.
+ * @example 
+ * const element = new superElement('div')
  */
 function SuperElement(tag) {
     this.element = document.createElement(tag);

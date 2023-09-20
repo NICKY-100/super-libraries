@@ -5,6 +5,8 @@ import SuperElement from "./SuperElement.js"
  * @extends SuperElement
  * @param {string} type - the type of button used.
  * @param {string} text - the text used.
+ * @example 
+ * const button = new SuperButton('small', 'submit');
  */
 function SuperButton(type, text) {
     SuperElement.call(this, 'button')
