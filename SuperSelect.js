@@ -2,7 +2,10 @@ import SuperElement from "./SuperElement.js"
 import SuperOption from "./SuperOption.js";
 
 /**
- * @param {string} select is called.
+ * @param {string} color - option 1 inside select
+ * @param {string} box1- second option inside array of first select option
+ * @param {string} one - color of box
+ * @param {string} box2 - second option inside array of second select option
  * @param SuperElement is called with parameters this and select
  * @param a new superOption is created with 
  */

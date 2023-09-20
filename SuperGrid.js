@@ -1,9 +1,14 @@
 import SuperElement from "./SuperElement.js"
 /**
-@param {string} tag
-@param {string} height
-@param 
-*/
+ * * * create a supergrid.
+ * @constructor
+ * @extends SuperElement
+ * @param {string} tag - name of a HTML tag
+ * @param {string} height - the height of the box
+ * @example
+ * const grid = new SuperGrid("div", '200px')
+ */
+
 // superGrid function
 function SuperGrid({
     tag = 'div',

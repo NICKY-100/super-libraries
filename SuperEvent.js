@@ -1,7 +1,9 @@
 import SuperElement from "./SuperElement.js"
 /**
- * 
- * @param {object} tag 
+* * create a button of specific type and text
+ * @constructor
+ * @extends SuperElement
+ * @param {string} tag - name of a HTML tag.
  */
 function SuperEvent(tag) {
     SuperElement.call(this, tag)

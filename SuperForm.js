@@ -1,8 +1,13 @@
 import SuperEvent from "./SuperEvent.js"
 
 /**
- * @ param {string}
- * 
+ * * * create a form for supergrid
+ * @constructor
+ * @extends SuperEvent
+ * @param {} - has no parameters
+ * @param {string} form - this is the form on grid
+ * @example
+ * const form = new superform('form')
  */
 function SuperForm() {
     SuperEvent.call(this, 'form')

@@ -1,7 +1,7 @@
 import SuperElement from "./SuperElement";
 /**
- *  @param {string} option and this,
- * @param element value  is called with value
+ * @param {string} value value of option
+ * @param {string} text - text within element
  * @param element type, and innertext
  * @param superOption is exported by default
  */
