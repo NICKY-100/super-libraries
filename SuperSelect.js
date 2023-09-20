@@ -4,9 +4,9 @@ import SuperOption from "./SuperOption.js";
 /**
  * @param {string} color - option 1 inside select
  * @param {string} box1- second option inside array of first select option
- * @param {string} one - color of box
+ * @param {string} one - first option of second selected array option
  * @param {string} box2 - second option inside array of second select option
- * @param SuperElement is called with parameters this and select
+ * @example 
  * @param a new superOption is created with 
  */
 function SuperSelect(options = [['color', 'box1'], ['one', 'box2']]) {
