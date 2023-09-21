@@ -2,12 +2,12 @@ import SuperElement from "./SuperElement.js"
 import SuperOption from "./SuperOption.js";
 
 /**
- * @param {string} color - option 1 inside select
- * @param {string} box1- second option inside array of first select option
- * @param {string} one - first option of second selected array option
- * @param {string} box2 - second option inside array of second select option
+ * create a select element with a list of options, each with values and text.  
+ * @constructor
+ * @extends SuperElement
+ * @param {Array.<string[]>} option - list of values and text for superOptions. 
  * @example 
- * @param a new superOption is created with 
+ * const select = new SuperSelect([['1', "one"],["2", 'two']])
  */
 function SuperSelect(options = [['color', 'box1'], ['one', 'box2']]) {
     SuperElement.call(this, 'select')

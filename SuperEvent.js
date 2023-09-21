@@ -4,6 +4,8 @@ import SuperElement from "./SuperElement.js"
  * @constructor
  * @extends SuperElement
  * @param {string} tag - name of a HTML tag.
+ * @example
+ * const event = new SuperEvent('tag')
  */
 function SuperEvent(tag) {
     SuperElement.call(this, tag)
