@@ -8,7 +8,7 @@ import SuperElement from "./SuperElement.js"
  */
 
 /**
-* * create a button of specific type and text
+ * create a button of specific type and text
  * @constructor
  * @extends SuperElement
  * @param {string} tag - name of a HTML tag.

@@ -1,6 +1,6 @@
 import SuperElement from "./SuperElement.js"
 /**
- * * create a supergrid.
+ * create a div element with name of HTML tag and height.
  * @constructor
  * @extends SuperElement
  * @param {string} tag - name of a HTML tag

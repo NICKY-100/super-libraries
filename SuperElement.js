@@ -9,7 +9,11 @@
 function SuperElement(tag) {
     this.element = document.createElement(tag);
 }
-// parent function and appending superElement to 
+
+/**
+ * 
+ * @param {SuperElement} parentElement 
+ */
 SuperElement.prototype.appendTo = function (parentElement) {
     parentElement.append(this.element);
 };
