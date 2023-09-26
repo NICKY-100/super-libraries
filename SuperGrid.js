@@ -1,6 +1,6 @@
 import SuperElement from "./SuperElement.js"
 /**
- * * * create a supergrid.
+ * * create a supergrid.
  * @constructor
  * @extends SuperElement
  * @param {string} tag - name of a HTML tag
@@ -8,8 +8,6 @@ import SuperElement from "./SuperElement.js"
  * @example
  * const grid = new SuperGrid("div", '200px')
  */
-
-// superGrid function
 function SuperGrid({
     tag = 'div',
     height = '200px'

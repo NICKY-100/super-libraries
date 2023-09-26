@@ -1,10 +1,9 @@
 import SuperEvent from "./SuperEvent.js"
 
 /**
- * * * create a form for supergrid
+ * * * create a form for superform
  * @constructor
  * @extends SuperEvent
- * @param {string} form - this is the form on grid
  * @example
  * const form = new superform('form')
  */
