@@ -11,7 +11,7 @@ function SuperElement(tag) {
 }
 
 /**
- * 
+ * appending element to parent element
  * @param {SuperElement} parentElement 
  */
 SuperElement.prototype.appendTo = function (parentElement) {
