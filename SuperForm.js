@@ -1,7 +1,7 @@
 import SuperEvent from "./SuperEvent.js"
 
 /**
- * create a form for element
+ * create a form element
  * @constructor
  * @extends SuperEvent
  * @example

@@ -22,9 +22,13 @@ function SuperGrid({
     this.element.style.display = 'flex'
     this.element.style.height = height
 }
-//create supergrid object
 SuperGrid.prototype = Object.create(SuperElement.prototype)
 
+/**
+ * alignment of element, ie center, top, right, left
+ * justify content of element.
+ * @param {SuperGrid} alignment 
+ */
 SuperGrid.prototype.alignment = function (alignment) {
     if (alignment === 'center') {
         this.element.style.justifyContent = 'center'
