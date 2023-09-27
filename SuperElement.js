@@ -12,7 +12,7 @@ function SuperElement(tag) {
 
 /**
  * appending element to parent element
- * @param {SuperElement} parentElement 
+ * @param {SuperElement} parentElement - main div element
  */
 SuperElement.prototype.appendTo = function (parentElement) {
     parentElement.append(this.element);
