@@ -27,7 +27,7 @@ SuperGrid.prototype = Object.create(SuperElement.prototype)
 /**
  * alignment of element, ie center, top, right, left
  * justify content of element.
- * @param {SuperGrid} alignment 
+ * @param {SuperGrid} alignment - alignment of element
  */
 SuperGrid.prototype.alignment = function (alignment) {
     if (alignment === 'center') {
