@@ -23,11 +23,19 @@ SuperBox.prototype = Object.create(SuperElement.prototype);
 /**
  * change background color 
  * @param {string} colour - background color 
+ * @example
+ * box.backgroundColor('red')
  */
 SuperBox.prototype.backgroundColor = function (colour) {
     this.element.style.backgroundColor = colour
 }
-//size function with dimensions
+/**
+ * setting size of element 
+ * @param {string} width - width of element
+ * @param {string} height - height of element
+ * @example
+ * box.size('200px', '200px')
+ */
 SuperBox.prototype.size = function (width, height) {
     this.element.style.width = width
     this.element.style.height = height

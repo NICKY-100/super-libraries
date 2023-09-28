@@ -13,7 +13,7 @@ import SuperElement from "./SuperElement.js"
  * @extends SuperElement
  * @param {string} tag - name of a HTML tag.
  * @example
- * const event = new SuperEvent('tag')
+ * const form = new SuperEvent('form')
  */
 function SuperEvent(tag) {
     SuperElement.call(this, tag)
@@ -23,6 +23,17 @@ SuperEvent.prototype = Object.create(SuperElement.prototype)
 /**
  * adding an event listener on submit to the element.
  * @param {SuperEvent~eventCallback} callback -  This callback is used after an event listener.
+ * @example
+ * form.submit(function(event){
+ *  console.log("hello world")
+ * })
+ * 
+ * SuperEvent.prototype.click = function (callback) {
+    this.element.addEventListener('click', (e) => {
+        e.preventDefault()
+        callback(e)
+    })
+}
  */
 SuperEvent.prototype.submit = function (callback) {
     this.element.addEventListener('submit', (e) => {
