@@ -27,13 +27,6 @@ SuperEvent.prototype = Object.create(SuperElement.prototype)
  * form.submit(function(event){
  *  console.log("hello world")
  * })
- * 
- * SuperEvent.prototype.click = function (callback) {
-    this.element.addEventListener('click', (e) => {
-        e.preventDefault()
-        callback(e)
-    })
-}
  */
 SuperEvent.prototype.submit = function (callback) {
     this.element.addEventListener('submit', (e) => {
