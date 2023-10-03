@@ -15,7 +15,7 @@ grid.alignment('bottomRight')
 const redBox = new SuperBox('div')
 console.dir(redBox.element.style)
 
-redBox.color('red')
+redBox.backgroundColor('red')
 // append redbox to grid element and give size
 redBox.appendTo(grid.element);
 redBox.size('100px', '100px');
@@ -29,7 +29,7 @@ yellowBox.appendTo(grid.element);
 const blueBox = new SuperBox('div')
 console.dir(blueBox.element.style)
 
-blueBox.color('blue')
+blueBox.backgroundColor('blue')
 
 blueBox.appendTo(grid.element);
 blueBox.size('100px', '100px');
