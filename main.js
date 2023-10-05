@@ -35,9 +35,14 @@ blueBox.appendTo(grid.element);
 blueBox.size('100px', '100px');
 
 // create a new superselect 
-const select = new SuperSelect()
-
-
+const select = new SuperSelect('box-alignment',
+    [
+        ["bottomRight", "bottom right"],
+        ["bottomLeft", "bottom left"],
+        ["bottomCenter", "bottomCenter"],
+        ["start", "start"]
+    ]
+)
 
 // submit button to create new button
 // create a new superForm and appending to form
@@ -47,6 +52,8 @@ select.appendTo(form.element)
 submit.appendTo(form.element)
 form.appendTo(document.body)
 form.submit(() => {
-    console.log("hello")
+
+    grid.alignment(form.getVal('box-alignment'))
 })
+
 

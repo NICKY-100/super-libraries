@@ -9,8 +9,9 @@ import SuperOption from "./SuperOption.js";
  * @example 
  * const select = new SuperSelect([['1', "one"],["2", 'two']])
  */
-function SuperSelect(options = [['color', 'box1'], ['one', 'box2']]) {
+function SuperSelect(name, options = [['color', 'box1'], ['one', 'box2']]) {
     SuperElement.call(this, 'select')
+    this.element.name = name
     for (let i = 0; i < options.length; i++) {
 
         const option = new SuperOption(options[i][0], options[i][1])

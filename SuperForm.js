@@ -12,5 +12,11 @@ function SuperForm() {
 }
 SuperForm.prototype = Object.create(SuperEvent.prototype)
 
+SuperForm.prototype.getVal = function (name) {
+    const formData = new FormData(this.element)
+    return formData.get(name)
+
+}
+
 
 export default SuperForm;
