@@ -40,7 +40,11 @@ const select = new SuperSelect('box-alignment',
         ["bottomRight", "bottom right"],
         ["bottomLeft", "bottom left"],
         ["bottomCenter", "bottomCenter"],
-        ["start", "start"]
+        ["bottom", "bottom"],
+        ["stretch", "stretch"],
+        ["left", "left"],
+        ["center", "center"],
+        ["top", "top"]
     ]
 )
 
