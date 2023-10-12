@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/super-libraries.umd.cjs",
+  "module": "./dist/super-libraries.js",
+  "exports": {
+    ".": {
+      "import": "./dist/super-libraries.js",
+      "require": "./dist/super-libraries.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
