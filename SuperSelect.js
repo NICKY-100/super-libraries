@@ -15,7 +15,6 @@ function SuperSelect(name, options = [['color', 'box1'], ['one', 'box2']]) {
     for (let i = 0; i < options.length; i++) {
 
         const option = new SuperOption(options[i][0], options[i][1])
-        // const option1 = new SuperOption('color', '3')
         option.appendTo(this.element)
     }
 }
