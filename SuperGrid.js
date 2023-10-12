@@ -66,3 +66,4 @@ SuperGrid.prototype.alignment = function (alignment) {
     }
 }
 export default SuperGrid
+
