@@ -5,27 +5,30 @@ import SuperEvent from "./SuperEvent.js"
  * @extends SuperEvent
  * @param {string}  - 
  * @example
- * const myInput = new SuperInput("")
+ * const myInput = new SuperInput("text", "first-name", [["class", "input-large"]])
+ * <input tupe = "text" name ="first-name" class="input-large"
   */
 // this function is incomplete
-function SuperInput(type, name, attributes = [['long', 'knife ', 'box1'], ['short', 'blade', 'box2']]) {
-
+function SuperInput(type, name, attributes = []) {
   SuperElement.call(this, 'input')
+
   this.element.type = type
   this.element.name = name
-  this.element.setAttribute = attributes
-  for (let i = 0; i < attributes.length; i++) {
 
-    const input = new SuperInput(attributes[i][0], attributes[i][1])
+  //add html  attributes to element 
+  for (let i = 0; i < attributes.length; i++) {
+    const [name, value] = setAttributes[i]
+
+    this.element.setAttributes(name, value)
     input.appendTo(this.element)
-    //const textInput = new SuperInput('text', "todo-item")
-    //const button = new SuperInput('button', "submit" , [
-    // [ " value"  "submit"]
-    // ])
-    // const todoForm
+
   }
 }
-
+//const textInput = new SuperInput('text', "todo-item")
+//const button = new SuperInput('button', "submit" , [
+// [ " value"  "submit"]
+// ])
+// const todoForm
 SuperInput.prototype = Object.create(SuperEvent.prototype)
 
 

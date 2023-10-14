@@ -44,7 +44,7 @@ const select = new SuperSelect('box-alignment',
         ["stretch", "stretch"],
         ["left", "left"],
         ["center", "center"],
-        ["top", "top"]
+        ["top", "top"],
     ]
 )
 
@@ -61,3 +61,20 @@ form.submit(() => {
 })
 
 
+//using switch
+
+// switch (alignment),
+//     case "center":
+//         console.log("center"),
+// case "top":
+//         console.log("top"),
+// case "right":
+//         console.log("right"),
+// case "left":
+//         console.log("left"),
+// case "bottom":
+//         console.log("bottom"),
+// case "bottomright":
+//         console.log("bottomright"),
+// case "bottomleft":
+//         console.log("bottomleft"),
