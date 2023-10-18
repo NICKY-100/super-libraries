@@ -56,25 +56,31 @@ select.appendTo(form.element)
 submit.appendTo(form.element)
 form.appendTo(document.body)
 form.submit(() => {
+    const alignment = form.getVal('box-alignment')
+    grid.alignment(alignment)
 
-    grid.alignment(form.getVal('box-alignment'))
+    switch (alignment) {
+        case "center":
+            console.log("center");
+            break
+        case "top":
+            console.log("top")
+            break
+        case "right":
+            console.log("right")
+            break
+        case "left":
+            console.log("left")
+            break
+        case "bottom":
+            console.log("bottom")
+            break
+        case "bottomright":
+            console.log("bottomright")
+            break
+        case "bottomleft":
+            console.log("bottomleft")
+            break
+    }
 })
 
-
-//using switch
-
-// switch (alignment),
-//     case "center":
-//         console.log("center"),
-// case "top":
-//         console.log("top"),
-// case "right":
-//         console.log("right"),
-// case "left":
-//         console.log("left"),
-// case "bottom":
-//         console.log("bottom"),
-// case "bottomright":
-//         console.log("bottomright"),
-// case "bottomleft":
-//         console.log("bottomleft"),
