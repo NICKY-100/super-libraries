@@ -32,38 +32,77 @@ SuperGrid.prototype = Object.create(SuperElement.prototype)
  * grid.alignment('center')
  * grid.alignment('bottomLeft')
  */
+
 SuperGrid.prototype.alignment = function (alignment) {
-    if (alignment === 'center') {
-        this.element.style.justifyContent = 'center'
-        this.element.style.alignItems = 'center'
-        //alignment top using justify content
-    } else if (alignment === 'top') {
-        this.element.style.alignItems = 'start'
-        //alignment right using justify content
-    } else if (alignment === "right") {
-        this.element.style.justifyContent = "right"
-        //alignment left using justify content
-    } else if (alignment === "left") {
-        this.element.style.justifyContent = "left"
-        //justify content left
-    } else if (alignment === "bottom") {
-        this.element.style.alignItems = "end"
-        //align items end
-    } else if (alignment === "bottomRight") {
-        this.element.style.alignItems = "end"
-        this.element.style.justifyContent = "right"
-        //justify content right
-    } else if (alignment === "bottomLeft") {
-        this.element.style.alignItems = "end"
-        this.element.style.justifyContent = "left"
-        // justify content left
-    } else if (alignment === "bottomCenter") {
-        this.element.style.alignItems = "end"
-        this.element.style.justifyContent = "center"
-        //example suing stretch
-    } else if (alignment === "stretch") {
-        this.element.style.alignItems = "stretch"
+
+    switch (alignment) {
+        case "center":
+            this.element.style.justifyContent = 'center'
+            this.element.style.alignItems = 'center'
+            console.log("center");
+            break
+        case "top":
+            this.element.style.alignItems = 'start'
+            this.element.style.justifyContent = 'start'
+            console.log("top")
+            break
+        case "right":
+            this.element.style.alignItems = 'right'
+            this.element.style.justifyContent = 'right'
+            console.log("right")
+            break
+        case "left":
+            this.element.style.alignItems = 'left'
+            this.element.style.justifyContent = 'left'
+            console.log("left")
+            break
+        case "bottomRight":
+            this.element.style.alignItems = 'end'
+            this.element.style.justifyContent = 'right'
+            console.log("bottomRight")
+            break
+        case "bottomLeft":
+            this.element.style.alignItems = 'end'
+            this.element.style.justifyContent = 'left'
+            console.log("bottomLeft")
+            break
+        case "bottomCenter":
+            this.element.style.alignItems = 'end'
+            this.element.style.justifyContent = 'center'
+            console.log("bottomCenter")
+            break
+        case "spaceBetween":
+            this.element.style.alignItems = "center"
+            this.element.style.justifyContent = 'space-between'
+            console.log("space-Between")
+            break
+        case "spaceAround":
+            this.element.style.alignItems = "center"
+            this.element.style.justifyContent = 'space-Around'
+            console.log("space-Around")
+            break
+        case "spaceEvenly":
+            this.element.style.alignItems = "center"
+            this.element.style.justifyContent = 'space-Evenly'
+            console.log("space-Evenly")
+            break
+        case "topRight":
+            this.element.style.alignItems = 'start'
+            this.element.style.justifyContent = 'right'
+            console.log("topRight")
+            break
+        case "topCenter":
+            this.element.style.alignItems = "start"
+            this.element.style.justifyContent = "center"
+            console.log("topCenter")
+            break
+        case "topLeft":
+            this.element.style.alignItems = 'start'
+            this.element.style.justifyContent = 'left'
+            console.log("topLeft")
+            break
     }
+
 }
 export default SuperGrid
 
