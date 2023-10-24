@@ -39,12 +39,18 @@ const select = new SuperSelect('box-alignment',
     [
         ["bottomRight", "bottom right"],
         ["bottomLeft", "bottom left"],
-        ["bottomCenter", "bottomCenter"],
-        ["bottom", "bottom"],
+        ["bottomCenter", "bottom center"],
         ["stretch", "stretch"],
         ["left", "left"],
+        ["right", "right"],
         ["center", "center"],
-        ["top", "top"],
+        ["topRight", "top right"],
+        ["topLeft", "top left"],
+        ["topCenter", "top center"],
+        ["spaceBetween", "space between"],
+        ["spaceEvenly", "space evenly"],
+        ["spaceAround", "space around"]
+
     ]
 )
 
@@ -58,29 +64,5 @@ form.appendTo(document.body)
 form.submit(() => {
     const alignment = form.getVal('box-alignment')
     grid.alignment(alignment)
-
-    switch (alignment) {
-        case "center":
-            console.log("center");
-            break
-        case "top":
-            console.log("top")
-            break
-        case "right":
-            console.log("right")
-            break
-        case "left":
-            console.log("left")
-            break
-        case "bottom":
-            console.log("bottom")
-            break
-        case "bottomright":
-            console.log("bottomright")
-            break
-        case "bottomleft":
-            console.log("bottomleft")
-            break
-    }
 })
 
