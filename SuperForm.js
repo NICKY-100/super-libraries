@@ -12,6 +12,12 @@ function SuperForm() {
 }
 SuperForm.prototype = Object.create(SuperEvent.prototype)
 
+/**
+ * getting value of element from SuperForm
+ * @params {string} name - value of element from when function is called
+ * @example
+ * form.getVal('firstName')
+ */
 SuperForm.prototype.getVal = function (name) {
     const formData = new FormData(this.element)
     return formData.get(name)
