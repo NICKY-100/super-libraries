@@ -1,9 +1,6 @@
 //import SuperBox and SuperGrid from respective js files.
-import SuperBox from './SuperBox.js';
-import SuperGrid from './SuperGrid.js';
-import SuperForm from './SuperForm.js';
-import SuperButton from './SuperButton.js';
-import SuperSelect from './SuperSelect.js';
+import { SuperBox, SuperButton, SuperForm, SuperGrid, SuperSelect } from './library/main';
+
 
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top

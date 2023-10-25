@@ -8,7 +8,7 @@ import SuperOption from "../SuperOption.js"
 import SuperInput from "../SuperInput.js"
 import SuperSelect from "../SuperSelect.js"
 
-export default {
+export {
     SuperBox,
     SuperButton,
     SuperElement,
