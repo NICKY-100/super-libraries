@@ -8,7 +8,7 @@ import SuperElement from "./SuperElement.js"
  * @example 
  * const button = new SuperButton('small', 'submit');
  */
-function SuperButton(type, text) {
+function SuperButton({ type, text }) {
     SuperElement.call(this, 'button')
 
     this.element.type = type
