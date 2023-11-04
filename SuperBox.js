@@ -11,7 +11,7 @@ import SuperElement from "./SuperElement.js";
  * @example 
  * const box = new SuperBox('div', 'red', '100px', '100px');
  */
-function SuperBox(tag, backgroundColor, width, height) {
+function SuperBox({ tag, backgroundColor, width, height }) {
     // append parent data to child
     SuperElement.call(this, tag);
     this.backgroundColor(backgroundColor);
