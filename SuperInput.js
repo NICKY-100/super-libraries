@@ -3,13 +3,15 @@ import SuperEvent from "./SuperEvent.js"
  * inputs for elements 
  * @constructor
  * @extends SuperEvent
- * @param {string}  - 
+ * @param {string} type -
+ * @param {string} name -
+ * @param {string} attributes -
  * @example
  * const myInput = new SuperInput("text", "first-name", [["class", "input-large"]])
  * <input tupe = "text" name ="first-name" class="input-large"
   */
 // this function is incomplete
-function SuperInput(type, name, attributes = []) {
+function SuperInput({ type, name, attributes = [] }) {
   SuperElement.call(this, 'input')
 
   this.element.type = type
