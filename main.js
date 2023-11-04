@@ -1,7 +1,7 @@
 //import SuperBox and SuperGrid from respective js files.
-import { SuperBox, SuperButton, SuperForm, SuperGrid, SuperSelect } from './library/main';
-
-
+import { superConstructors } from './library/main';
+import $e from './library/main.js'
+const { SuperBox, SuperButton, SuperForm, SuperGrid, SuperSelect } = superConstructors
 // new SuperGrid with height and appending to body  
 // giving grid an alignment of top
 const grid = new SuperGrid({ height: '100vh' })
@@ -62,4 +62,11 @@ form.submit(() => {
     const alignment = form.getVal('box-alignment')
     grid.alignment(alignment)
 })
+
+const smallBox = $e('SuperBox', { tag: "div", backgroundColor: "blue", height: "100px", width: "100px" })
+//main.js
+
+
+$e('superElement', { height: '100px', width: '100px' })
+$e('superGrid', { alignment: "center" })
 
