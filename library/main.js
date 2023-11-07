@@ -8,7 +8,7 @@ import SuperOption from "../SuperOption.js"
 import SuperInput from "../SuperInput.js"
 import SuperSelect from "../SuperSelect.js"
 
-export {
+export const superConstructors = {
     SuperBox,
     SuperButton,
     SuperElement,
@@ -17,5 +17,12 @@ export {
     SuperGrid,
     SuperOption,
     SuperSelect,
-    SuperInput
+    SuperInput,
 }
+
+export default function $e(type, options) {
+    if (type === "SuperBox") {
+        return new superConstructors.SuperBox(options)
+    }
+}
+
