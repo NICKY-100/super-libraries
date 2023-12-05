@@ -1,0 +1,28 @@
+{
+  "name": "super-libraries",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/super-libraries.umd.cjs",
+  "module": "./dist/super-libraries.js",
+  "exports": {
+    ".": {
+      "import": "./dist/super-libraries.js",
+      "require": "./dist/super-libraries.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.2",
+    "standard": "^17.1.0",
+    "vite": "^4.4.5"
+  }
+}
