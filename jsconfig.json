@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext"
+  },
+    "include": [
+        "library/*.js",
+      "*.js",
+    ],
+    "exclude": ["node_modules"]
+  }
