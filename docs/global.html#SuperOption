@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: SuperEvent</title>
+    <title>JSDoc: Class: SuperOption</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: SuperEvent</h1>
+    <h1 class="page-title">Class: SuperOption</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>SuperEvent<span class="signature">(tag)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>SuperOption<span class="signature">(value, text)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="SuperEvent"><span class="type-signature"></span>new SuperEvent<span class="signature">(tag)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="SuperOption"><span class="type-signature"></span>new SuperOption<span class="signature">(value, text)</span><span class="type-signature"></span></h4>
     
 
     
@@ -49,7 +49,7 @@
 
 
 <div class="description">
-    create a button of specific type and text
+    create list of element option with value and text.
 </div>
 
 
@@ -85,7 +85,7 @@
 
         <tr>
             
-                <td class="name"><code>tag</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
@@ -101,7 +101,30 @@
 
             
 
-            <td class="description last">name of a HTML tag.</td>
+            <td class="description last">value of option element</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>text</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">text within option element</td>
         </tr>
 
     
@@ -142,7 +165,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperEvent.js.html">SuperEvent.js</a>, <a href="SuperEvent.js.html#line18">line 18</a>
+        <a href="SuperOption.js.html">SuperOption.js</a>, <a href="SuperOption.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -173,7 +196,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const form = new SuperEvent('form')</code></pre>
+    <pre class="prettyprint"><code>const option = new SuperOption("1", "one")</code></pre>
 
 
 
@@ -357,293 +380,8 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
 
 
         
-            
-
     
 
-    
-    <h4 class="name" id="submit"><span class="type-signature"></span>submit<span class="signature">(callback)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    adding an event listener on submit to the element.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="SuperEvent.html#~eventCallback">SuperEvent~eventCallback</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">This callback is used after an event listener.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperEvent.js.html">SuperEvent.js</a>, <a href="SuperEvent.js.html#line31">line 31</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>form.submit(function(event){
- console.log("hello world")
-})</code></pre>
-
-
-
-        
-    
-
-    
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
-
-    
-
-    
-    <h4 class="name" id="~eventCallback"><span class="type-signature"></span>eventCallback<span class="signature">(event)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    This callback is used after an event listener.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Event</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event</a> interface represents an event which takes place in the DOM.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperEvent.js.html">SuperEvent.js</a>, <a href="SuperEvent.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
     
 
     

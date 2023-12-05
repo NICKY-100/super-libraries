@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>SuperBox<span class="signature">(tag, backgroundColor, width, height)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>SuperBox<span class="signature">(options)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="SuperBox"><span class="type-signature"></span>new SuperBox<span class="signature">(tag, backgroundColor, width, height)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="SuperBox"><span class="type-signature"></span>new SuperBox<span class="signature">(options)</span><span class="type-signature"></span></h4>
     
 
     
@@ -85,13 +85,13 @@
 
         <tr>
             
-                <td class="name"><code>tag</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type"><a href="global.html#SuperBoxOptions">SuperBoxOptions</a></span>
 
 
             
@@ -101,76 +101,7 @@
 
             
 
-            <td class="description last">name of the HTML tag.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>backgroundColor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the background colour of element.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>width</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">width of element</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>height</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">height of element</td>
+            <td class="description last"><a href="global.html#SuperBoxOptions">SuperBoxOptions</a></td>
         </tr>
 
     
@@ -211,7 +142,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line14">line 14</a>
+        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line19">line 19</a>
     </li></ul></dd>
     
 
@@ -242,7 +173,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const box = new SuperBox('div', 'red', '100px', '100px');</code></pre>
+    <pre class="prettyprint"><code>const box = new SuperBox({tag:'div',backgroundColor: 'red',width:'100px', height:'100px'});</code></pre>
 
 
 
@@ -532,7 +463,7 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line29">line 29</a>
+        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line34">line 34</a>
     </li></ul></dd>
     
 
@@ -697,7 +628,7 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line39">line 39</a>
+        <a href="SuperBox.js.html">SuperBox.js</a>, <a href="SuperBox.js.html#line44">line 44</a>
     </li></ul></dd>
     
 
@@ -748,13 +679,13 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="SuperBox.html">SuperBox</a></li><li><a href="SuperButton.html">SuperButton</a></li><li><a href="SuperElement.html">SuperElement</a></li><li><a href="SuperEvent.html">SuperEvent</a></li><li><a href="SuperForm.html">SuperForm</a></li><li><a href="SuperGrid.html">SuperGrid</a></li><li><a href="SuperOption.html">SuperOption</a></li><li><a href="SuperSelect.html">SuperSelect</a></li></ul><h3>Global</h3><ul><li><a href="global.html#SuperInput">SuperInput</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="$e.html">$e</a></li></ul><h3>Classes</h3><ul><li><a href="SuperBox.html">SuperBox</a></li><li><a href="SuperButton.html">SuperButton</a></li><li><a href="SuperElement.html">SuperElement</a></li><li><a href="SuperEvent.html">SuperEvent</a></li><li><a href="SuperForm.html">SuperForm</a></li><li><a href="SuperGrid.html">SuperGrid</a></li><li><a href="SuperInput.html">SuperInput</a></li><li><a href="SuperOption.html">SuperOption</a></li><li><a href="SuperSelect.html">SuperSelect</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Thu Oct 05 2023 21:55:26 GMT+0100 (British Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Nov 28 2023 18:48:40 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>

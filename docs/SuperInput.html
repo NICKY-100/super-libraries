@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: SuperEvent</title>
+    <title>JSDoc: Class: SuperInput</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: SuperEvent</h1>
+    <h1 class="page-title">Class: SuperInput</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>SuperEvent<span class="signature">(tag)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>SuperInput<span class="signature">(options)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="SuperEvent"><span class="type-signature"></span>new SuperEvent<span class="signature">(tag)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="SuperInput"><span class="type-signature"></span>new SuperInput<span class="signature">(options)</span><span class="type-signature"></span></h4>
     
 
     
@@ -49,7 +49,7 @@
 
 
 <div class="description">
-    create a button of specific type and text
+    inputs for elements
 </div>
 
 
@@ -85,7 +85,53 @@
 
         <tr>
             
-                <td class="name"><code>tag</code></td>
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
             
 
             <td class="type">
@@ -98,10 +144,103 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">name of a HTML tag.</td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">the input type</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">the input name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>attributes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Array.&lt;string>></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    []
+                
+                </td>
+            
+
+            <td class="description last">list of attributes that adds to the element.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -142,7 +281,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperEvent.js.html">SuperEvent.js</a>, <a href="SuperEvent.js.html#line18">line 18</a>
+        <a href="SuperInput.js.html">SuperInput.js</a>, <a href="SuperInput.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -173,7 +312,8 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const form = new SuperEvent('form')</code></pre>
+    <pre class="prettyprint"><code>const myInput = new SuperInput({type:"text", name:"first-name", attributes:[["class", "input-large"]]})
+&lt;input tupe = "text" name ="first-name" class="input-large"></code></pre>
 
 
 
@@ -187,7 +327,7 @@
 
 
     <ul>
-        <li><a href="global.html#SuperElement">SuperElement</a></li>
+        <li><a href="SuperEvent.html">SuperEvent</a></li>
     </ul>
 
 
@@ -295,7 +435,7 @@
     
     <dt class="inherited-from">Inherited From:</dt>
     <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="global.html#SuperElement#appendTo">SuperElement#appendTo</a>
+        <a href="SuperElement.html#appendTo">SuperElement#appendTo</a>
     </li></ul></dd>
     
 
@@ -320,7 +460,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperElement.js.html">SuperElement.js</a>, <a href="SuperElement.js.html#line25">line 25</a>
+        <a href="SuperElement.js.html">SuperElement.js</a>, <a href="SuperElement.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -441,6 +581,11 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
     
 
     
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="SuperEvent.html#submit">SuperEvent#submit</a>
+    </li></ul></dd>
+    
 
     
 
@@ -504,147 +649,6 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
     
 
     
-        <h3 class="subsection-title">Type Definitions</h3>
-
-        
-                
-
-    
-
-    
-    <h4 class="name" id="~eventCallback"><span class="type-signature"></span>eventCallback<span class="signature">(event)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    This callback is used after an event listener.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>event</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Event</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event</a> interface represents an event which takes place in the DOM.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="SuperEvent.js.html">SuperEvent.js</a>, <a href="SuperEvent.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-    
 
     
 </article>
@@ -657,13 +661,13 @@ myElement.appendTo(document.createElement('h1'))</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="$e.html">$e</a></li></ul><h3>Classes</h3><ul><li><a href="$e.SuperBox.html">SuperBox</a></li><li><a href="global.html#SuperButton">SuperButton</a></li><li><a href="global.html#SuperElement">SuperElement</a></li><li><a href="SuperEvent.html">SuperEvent</a></li><li><a href="SuperForm.html">SuperForm</a></li><li><a href="global.html#SuperGrid">SuperGrid</a></li><li><a href="global.html#SuperInput">SuperInput</a></li><li><a href="global.html#SuperOption">SuperOption</a></li><li><a href="global.html#SuperSelect">SuperSelect</a></li></ul><h3><a href="global.html">Global</a></h3>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="$e.html">$e</a></li></ul><h3>Classes</h3><ul><li><a href="$e.SuperBox.html">SuperBox</a></li><li><a href="SuperButton.html">SuperButton</a></li><li><a href="SuperElement.html">SuperElement</a></li><li><a href="SuperEvent.html">SuperEvent</a></li><li><a href="SuperForm.html">SuperForm</a></li><li><a href="SuperGrid.html">SuperGrid</a></li><li><a href="SuperInput.html">SuperInput</a></li><li><a href="SuperOption.html">SuperOption</a></li><li><a href="SuperSelect.html">SuperSelect</a></li></ul><h3><a href="global.html">Global</a></h3>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Nov 28 2023 19:15:12 GMT+0000 (Greenwich Mean Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Nov 28 2023 18:51:42 GMT+0000 (Greenwich Mean Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -1,10 +1,10 @@
-import SuperElement from "./SuperElement.js"
+import SuperElement from './SuperElement.js'
 
 /**
  * This callback is used after an event listener.
  * @callback SuperEvent~eventCallback
 * @param {Event} event - {@link https://developer.mozilla.org/en-US/docs/Web/API/Event Event} interface represents an event which takes place in the DOM.
- * 
+ *
  */
 
 /**
@@ -15,8 +15,8 @@ import SuperElement from "./SuperElement.js"
  * @example
  * const form = new SuperEvent('form')
  */
-function SuperEvent(tag) {
-    SuperElement.call(this, tag)
+function SuperEvent (tag) {
+  SuperElement.call(this, tag)
 }
 SuperEvent.prototype = Object.create(SuperElement.prototype)
 
@@ -29,9 +29,9 @@ SuperEvent.prototype = Object.create(SuperElement.prototype)
  * })
  */
 SuperEvent.prototype.submit = function (callback) {
-    this.element.addEventListener('submit', (e) => {
-        e.preventDefault()
-        callback(e)
-    })
+  this.element.addEventListener('submit', (e) => {
+    e.preventDefault()
+    callback(e)
+  })
 }
-export default SuperEvent;
+export default SuperEvent

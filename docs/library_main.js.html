@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: SuperInput.js</title>
+    <title>JSDoc: Source: library/main.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: SuperInput.js</h1>
+    <h1 class="page-title">Source: library/main.js</h1>
 
     
 
@@ -26,49 +26,39 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import SuperEvent from './SuperEvent.js'
+            <pre class="prettyprint source linenums"><code>import SuperBox from '../SuperBox.js'
+import SuperButton from '../SuperButton.js'
+import SuperForm from '../SuperForm.js'
+import SuperGrid from '../SuperGrid.js'
+import SuperOption from '../SuperOption.js'
+import SuperInput from '../SuperInput.js'
+import SuperSelect from '../SuperSelect.js'
 
-/**
- * @typedef {Object} SuperInput
- * @property {string} options.type - the input type
- * @property {string} options.name - the input name
- * @property {Array.&lt;string[]>} [options.attributes =[]] - list of attributes that adds to the element.
- */
-
-/**
- * inputs for elements
- * @constructor
- * @extends SuperEvent
- * @param {Object} options
- * @param {string} options.type - the input type
- * @param {string} options.name - the input name
- * @param {Array.&lt;string[]>} [options.attributes=[]] - list of attributes that adds to the element.
- * @example
- * const myInput = new SuperInput({type:"text", name:"first-name", attributes:[["class", "input-large"]]})
- * &lt;input tupe = "text" name ="first-name" class="input-large">
-  */
-// this function is incomplete
-function SuperInput ({ type, name, attributes = [] }) {
-  SuperEvent.call(this, 'input')
-
-  this.element.type = type
-  this.element.name = name
-
-  // add html  attributes to element
-  for (let i = 0; i &lt; attributes.length; i++) {
-    const [name, value] = attributes[i]
-
-    this.element.setAttributes(name, value)
-  }
+export const superConstructors = {
+  SuperBox,
+  SuperButton,
+  SuperForm,
+  SuperGrid,
+  SuperOption,
+  SuperInput,
+  SuperSelect
 }
-// const textInput = new SuperInput('text', "todo-item")
-// const button = new SuperInput('button', "submit" , [
-// [ " value"  "submit"]
-// ])
-// const todoForm
-SuperInput.prototype = Object.create(SuperEvent.prototype)
+/**
+ * $e library of SuperElement
+ * @namespace
+ * @param {string} type
+ * @param {(SuperBoxOptions|Object)} options
+ * @return {SuperElement}
+ * @example
+ * const box = $e("SuperBox",{width: '100px'} )
+ */
+function $e (type, options) {
+  return new superConstructors[type](options)
+}
 
-export default SuperEvent
+export default $e
+
+// No matching export in "library/main.js" for import "SuperConstructors"
 </code></pre>
         </article>
     </section>

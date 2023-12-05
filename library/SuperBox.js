@@ -1,7 +1,7 @@
 import SuperElement from './SuperElement.js'
 
 /**
- * @typedef {Object} SuperBox~Options
+ * @typedef {Object} SuperBoxOptions
  * @property {string} tag - name of the HTML tag.
  * @property {string} backgroundColor -  the background colour of element.
  * @property {string} width - width of element
@@ -10,9 +10,9 @@ import SuperElement from './SuperElement.js'
 
 /**
  * create a box of a specific color
- * @constructor
+ * @class
  * @extends SuperElement
- * @param {...SuperBox~Options} options - {@link SuperBox~Options}
+ * @param {SuperBoxOptions} options - {@link SuperBoxOptions}
  * @example
  * const box = new SuperBox({tag:'div',backgroundColor: 'red',width:'100px', height:'100px'});
  */
@@ -22,7 +22,7 @@ function SuperBox ({ tag, backgroundColor, width, height }) {
   this.backgroundColor(backgroundColor)
   this.size(width, height)
 }
-// append parent prototypes to child constructor
+// append parent prototypes to child constructor ~
 SuperBox.prototype = Object.create(SuperElement.prototype)
 
 /**
@@ -33,6 +33,7 @@ SuperBox.prototype = Object.create(SuperElement.prototype)
  */
 SuperBox.prototype.backgroundColor = function (colour) {
   this.element.style.backgroundColor = colour
+  this.
 }
 /**
  * setting size of element

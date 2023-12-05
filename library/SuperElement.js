@@ -1,14 +1,23 @@
+/**
+ * @typedef {Object} SuperElementOptions
+ * @property {string} tag - name of a HTML tag
+ */
+
 // parent Constructor
 /**
- * create an element of any specific type 
- * @constructor
+ * create an element of any specific type
+ * @class
  * @param {string} tag - name of a HTML tag.
- * @example 
+ * @example
  * const element = new SuperElement('div')
  */
-function SuperElement(tag) {
-    this.element = document.createElement(tag);
+function SuperElement (tag) {
+  /** @type {HTMLElement} */
+  this.element = document.createElement(tag)
 }
+// constructor ({tag}){
+//   super('Element')
+//   }
 
 /**
  * appending element to parent element
@@ -18,7 +27,7 @@ function SuperElement(tag) {
  * myElement.appendTo(document.createElement('h1'))
  */
 SuperElement.prototype.appendTo = function (parentElement) {
-    parentElement.append(this.element);
-};
+  parentElement.append(this.element)
+}
 
-export default SuperElement;
+export default SuperElement
