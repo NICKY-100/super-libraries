@@ -33,7 +33,6 @@ SuperBox.prototype = Object.create(SuperElement.prototype)
  */
 SuperBox.prototype.backgroundColor = function (colour) {
   this.element.style.backgroundColor = colour
-  this.
 }
 /**
  * setting size of element
