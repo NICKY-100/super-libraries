@@ -1,18 +1,16 @@
 import SuperElement from './SuperElement.js'
 
 /**
- * @typedef {Object} SuperGrid
- * @property {string} options.tag - name of a HTML tag
- * @property {string} options.height - the height of the box
+ * @typedef {Object} SuperGridOptions
+ * @property {string} [options.tag='div'] - name of a HTML tag
+ * @property {string} [options.height='200px'] - the height of the box
  */
 
 /**
  * create a div element with name of HTML tag and height.
  * @constructor
  * @extends SuperElement
- * @param {Object} options
- * @param {string} options.tag - name of a HTML tag
- * @param {string} options.height - the height of the box
+ * @param {SuperGridOptions} options
  * @example
  * const grid = new SuperGrid({tag:"div", height:'200px'})
  */
