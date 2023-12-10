@@ -1,7 +1,7 @@
 import SuperEvent from './SuperEvent.js'
 
 /**
- * @typedef {Object} SuperInput
+ * @typedef {Object} SuperInputOptions
  * @property {string} options.type - the input type
  * @property {string} options.name - the input name
  * @property {Array.<string[]>} [options.attributes =[]] - list of attributes that adds to the element.
@@ -40,4 +40,4 @@ function SuperInput ({ type, name, attributes = [] }) {
 // const todoForm
 SuperInput.prototype = Object.create(SuperEvent.prototype)
 
-export default SuperEvent
+export default SuperInput
