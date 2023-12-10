@@ -16,19 +16,20 @@ import SuperElement from './SuperElement.js'
  * @example
  * const button = new SuperButton({text:'small', type:'submit'});
  */
-  constructor ({type, text}){
-  super('button')
+function SuperButton ({ type, text }) {
+  SuperElement.call(this, 'button')
 
-  if (this.element instanceof HTMLButtonElement ){s
   this.element.type = type
   this.element.innerText = text
-  }
 }
-// function SuperButton ({ type, text }) {
-//   SuperElement.call(this, 'button')
 
+//   constructor ({type, text}){
+//   super('button')
+
+//   if (this.element instanceof HTMLButtonElement ){
 //   this.element.type = type
 //   this.element.innerText = text
+//   }
 // }
 
 SuperButton.prototype = Object.create(SuperElement.prototype)
