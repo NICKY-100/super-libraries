@@ -17,7 +17,6 @@ function SuperElement (tag) {
 }
 // constructor ({tag}){
 //   super('Element')
-//   }
 
 /**
  * appending element to parent element
@@ -27,6 +26,9 @@ function SuperElement (tag) {
  * myElement.appendTo(document.createElement('h1'))
  */
 SuperElement.prototype.appendTo = function (parentElement) {
+  if (parentElement.element && parentElement.element.tagName) {
+    parentElement = parentElement.element
+  }
   parentElement.append(this.element)
 }
 
