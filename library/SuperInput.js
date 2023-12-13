@@ -40,4 +40,7 @@ function SuperInput ({ type, name, attributes = [] }) {
 // const todoForm
 SuperInput.prototype = Object.create(SuperEvent.prototype)
 
+SuperInput.prototype.clear = function () {
+  this.element.value = ''
+}
 export default SuperInput
