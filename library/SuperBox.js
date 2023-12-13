@@ -45,4 +45,7 @@ SuperBox.prototype.size = function (width, height) {
   this.element.style.width = width
   this.element.style.height = height
 }
+SuperBox.prototype.addText = function (text) {
+  this.element.textContent = text
+}
 export default SuperBox
