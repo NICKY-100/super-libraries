@@ -23,15 +23,6 @@ function SuperButton ({ type, text }) {
   this.element.innerText = text
 }
 
-//   constructor ({type, text}){
-//   super('button')
-
-//   if (this.element instanceof HTMLButtonElement ){
-//   this.element.type = type
-//   this.element.innerText = text
-//   }
-// }
-
 SuperButton.prototype = Object.create(SuperElement.prototype)
-
+SuperButton.prototype.constructor = SuperButton
 export default SuperButton
