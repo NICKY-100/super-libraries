@@ -1,4 +1,4 @@
-import SuperEvent from './SuperEvent.js'
+import SuperElement from './SuperElement.js'
 
 /**
  * create a form element
@@ -8,9 +8,9 @@ import SuperEvent from './SuperEvent.js'
  * const form = new Superform()
  */
 function SuperForm () {
-  SuperEvent.call(this, 'form')
+  SuperElement.call(this, 'form')
 }
-SuperForm.prototype = Object.create(SuperEvent.prototype)
+SuperForm.prototype = Object.create(SuperElement.prototype)
 
 /**
  * getting value of element from SuperForm
