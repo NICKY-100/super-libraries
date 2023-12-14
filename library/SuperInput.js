@@ -1,4 +1,4 @@
-import SuperEvent from './SuperEvent.js'
+import SuperElement from './SuperElement.js'
 
 /**
  * @typedef {Object} SuperInputOptions
@@ -21,7 +21,7 @@ import SuperEvent from './SuperEvent.js'
   */
 // this function is incomplete
 function SuperInput ({ type, name, attributes = [] }) {
-  SuperEvent.call(this, 'input')
+  SuperElement.call(this, 'input')
 
   this.element.type = type
   this.element.name = name
@@ -38,7 +38,7 @@ function SuperInput ({ type, name, attributes = [] }) {
 // [ " value"  "submit"]
 // ])
 // const todoForm
-SuperInput.prototype = Object.create(SuperEvent.prototype)
+SuperInput.prototype = Object.create(SuperElement.prototype)
 
 SuperInput.prototype.clear = function () {
   this.element.value = ''
