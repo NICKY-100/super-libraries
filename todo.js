@@ -8,35 +8,37 @@ const todo = $e('SuperInput', { type: 'text', name: 'todoitem' })
 
 const submit = $e('SuperButton', { type: 'submit', text: 'submit' })
 
-const addBtn = $e('SuperButton', { type: 'submit', text: 'delete' })
 // const select1 = $e('SuperButton', { type: 'button', text: 'complete-all' })
 // const select2 = $e('SuperButton', { type: 'button', text: 'show-completed' })
 // const select3 = $e('SuperButton', { type: 'button', text: 'show-active' })
 
-const list = $e('SuperBox', { tag: 'ol' })
+const ol = $e('SuperBox', { tag: 'ol' })
 
 todo.appendTo(form)
 
 submit.appendTo(form)
+
 // select1.appendTo(form)
 // select2.appendTo(form)
 // select3.appendTo(form)
 
 form.appendTo(document.body)
 // list represents ol
-list.appendTo(document.body)
+ol.appendTo(document.body)
 form.submit(() => {
   // list1 is li
-  const list1 = $e('SuperBox', { tag: 'li' })
-  list1.appendTo(list)
+  const li = $e('SuperBox', { tag: 'li' })
+  li.appendTo(ol)
 
-  // const addBtn = $e('SuperButton', { type: 'submit', text: 'delete' })
+  const addBtn = $e('SuperButton', { type: 'button', text: 'delete' })
+  addBtn.click(() => {
+    li.remove()
+  })
   // added last session
-  addBtn.appendTo(list)
 
   const todoValue = form.getVal('todoitem')
-  list1.addText(todoValue)
+  li.addText(todoValue)
+  addBtn.appendTo(li)
   console.log(todoValue)
   todo.clear()
 })
-// line 35, 11
