@@ -21,17 +21,12 @@ import SuperElement from './SuperElement.js'
   */
 // this function is incomplete
 function SuperInput ({ type, name, attributes = [] }) {
-  SuperElement.call(this, 'input')
+  SuperElement.call(this, 'input', attributes)
 
   this.element.type = type
   this.element.name = name
 
   // add html  attributes to element
-  for (let i = 0; i < attributes.length; i++) {
-    const [name, value] = attributes[i]
-
-    this.element.setAttributes(name, value)
-  }
 }
 // const textInput = new SuperInput('text', "todo-item")
 // const button = new SuperInput('button', "submit" , [
