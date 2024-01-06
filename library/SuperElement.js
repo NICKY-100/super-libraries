@@ -12,9 +12,17 @@ import SuperEvent from './SuperEvent.js'
  * @example
  * const element = new SuperElement('div')
  */
-function SuperElement (tag) {
+function SuperElement (tag, attributes) {
   /** @type {HTMLElement} */
+
   this.element = document.createElement(tag)
+  if (attributes) {
+    for (let i = 0; i < attributes.length; i++) {
+      const [name, value] = attributes[i]
+      // add html  attributes to element
+      this.element.setAttribute(name, value)
+    }
+  }
 }
 SuperElement.prototype = Object.create(SuperEvent.prototype)
 SuperElement.prototype.constructor = SuperElement
