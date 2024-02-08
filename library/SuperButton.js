@@ -16,8 +16,8 @@ import SuperElement from './SuperElement.js'
  * @example
  * const button = new SuperButton({text:'small', type:'submit'});
  */
-function SuperButton ({ type, text }) {
-  SuperElement.call(this, 'button')
+function SuperButton ({ type, text = '', attributes }) {
+  SuperElement.call(this, 'button', attributes)
 
   this.element.type = type
   this.element.innerText = text
