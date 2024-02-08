@@ -41,7 +41,6 @@ SuperEvent.prototype.submit = function (callback) {
  */
 SuperEvent.prototype.click = function (callback) {
   this.element.addEventListener('click', (e) => {
-    e.preventDefault()
     callback(e)
   })
 }
