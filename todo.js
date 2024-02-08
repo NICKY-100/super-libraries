@@ -1,20 +1,29 @@
 import $e from './library/main.js'
 
+// adding todo class / section for form
+const section = $e('SuperBox', { attributes: [['class', 'todo']], tag: 'section' })
+section.appendTo(document.body)
 // create a SuperForm
-const form = $e('SuperForm')
+// appending section to form
+const form = $e('SuperForm', { attributes: [['class', 'todo__form']] })
+form.appendTo(section)
 
 // create a todo list using type and text
-const todo = $e('SuperInput', { type: 'text', name: 'todoitem' })
+const todo = $e('SuperInput', { attributes: [['class', 'todo__input'], ['placeholder', 'Type here']], type: 'text', name: 'todoitem' })
 
-const submit = $e('SuperButton', { type: 'submit', text: 'submit' })
+const submit = $e('SuperButton', { attributes: [['class', 'todo__submit']], type: 'submit', text: 'Add' })
+const myFooter = $e('SuperBox', { attributes: [['class', 'todo__footer']], tag: 'footer' })
+const showAll = $e('SuperButton', { attributes: [['class', 'todo__show-item']], type: 'button', text: 'All' })
+const completeAll = $e('SuperButton', { attributes: [['class', 'todo__show-item']], type: 'button', text: 'Complete All' })
+const showCompleted = $e('SuperButton', { attributes: [['class', 'todo__show-item']], type: 'button', text: 'Show Completed' })
+const showActive = $e('SuperButton', { attributes: [['class', 'todo__show-item']], type: 'button', text: 'Show Active' })
+const activeAll = $e('SuperButton', { attributes: [['class', 'todo__show-item']], type: 'button', text: 'Active All' })
 
-const showAll = $e('SuperButton', { type: 'button', text: 'show-all' })
-const completeAll = $e('SuperButton', { type: 'button', text: 'complete-all' })
-const showCompleted = $e('SuperButton', { type: 'button', text: 'show-completed' })
-const showActive = $e('SuperButton', { type: 'button', text: 'show-active' })
-const activeAll = $e('SuperButton', { type: 'button', text: 'active-all' })
-
-const ol = $e('SuperBox', { tag: 'ol' })
+const ol = $e('SuperBox', { attributes: [['class', 'todo__items']], tag: 'ol' })
+const showButtons = $e('SuperBox', { tag: 'div' })
+showButtons.appendTo(myFooter)
+const showToggle = $e('SuperBox', { tag: 'div' })
+showToggle.appendTo(myFooter)
 
 let filterType = 'show-all'
 
@@ -22,14 +31,15 @@ todo.appendTo(form)
 
 submit.appendTo(form)
 
-form.appendTo(document.body)
-showAll.appendTo(document.body)
-completeAll.appendTo(document.body)
-showCompleted.appendTo(document.body)
-showActive.appendTo(document.body)
-activeAll.appendTo(document.body)
+form.appendTo(section)
+ol.appendTo(section)
+myFooter.appendTo(section)
+showAll.appendTo(showButtons)
+completeAll.appendTo(showToggle)
+showCompleted.appendTo(showButtons)
+showActive.appendTo(showButtons)
+activeAll.appendTo(showToggle)
 // list represents ol
-ol.appendTo(document.body)
 
 form.submit(() => {
   // only add text if exist
@@ -39,17 +49,29 @@ form.submit(() => {
   }
 
   // list1 is li
-  const li = $e('SuperBox', { tag: 'li' })
+  const li = $e('SuperBox', { attributes: [['class', 'todo__item']], tag: 'li' })
   li.appendTo(ol)
   // creat button type with text delete
-  const addBtn = $e('SuperButton', { type: 'button', text: 'delete' })
+  const addBtn = $e('SuperButton', { attributes: [['class', 'todo__delete']], type: 'button' })
+  const todoDelete = $e('SuperBox', { attributes: [['class', 'fa-solid fa-xmark']], tag: 'i' })
+  todoDelete.appendTo(addBtn)
   addBtn.click(() => {
     li.remove()
   })
 
   const inputId = Math.random()
-  const input = $e('SuperInput', { type: 'checkbox', name: 'checkbox', attributes: [['id', inputId]] })
-  const label = $e('SuperBox', { tag: 'label', attributes: [['for', inputId]] })
+  const input = $e('SuperInput', { type: 'checkbox', name: 'checkbox', attributes: [['id', inputId], ['class', 'todo__checkbox']] })
+  const label = $e('SuperBox', { tag: 'label', attributes: [['class', 'todo__label'], ['for', inputId]], text: 'todo__item' })
+  // add click event on mouseup
+  input.element.addEventListener('change', () => {
+    if (filterType === 'active') {
+      filterActive()
+    } else if (filterType === 'show-all') {
+      filterAll()
+    } else if (filterType === 'completed') {
+      filterCompleted()
+    }
+  })
 
   label.addText(todoValue)
   input.appendTo(li)
@@ -76,7 +98,7 @@ function filterActive () {
   // show active
   for (let i = 0; i < checkboxes.length; i++) {
     if (!checkboxes[i].checked) {
-      checkboxes[i].parentElement.style.display = 'list-item'
+      checkboxes[i].parentElement.style.display = 'flex'
     } else {
       checkboxes[i].parentElement.style.display = 'none'
     }
@@ -84,12 +106,7 @@ function filterActive () {
 }
 
 showAll.click(() => {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]')
-  for (let i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].checked = true
-  }
-  ///
-  filterType = 'active'
+  filterType = 'show-all'
   console.log('showAll')
   filterAll()
 })
@@ -104,17 +121,14 @@ completeAll.click(() => {
 })
 
 showCompleted.click(() => {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]')
-  for (let i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].checked = true
-  }
+  filterType = 'completed'
   console.log('showCompleted')
   filterCompleted()
 })
 function filterAll () {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]')
   for (let i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].parentElement.style.display = 'list-item'
+    checkboxes[i].parentElement.style.display = 'flex'
     console.log('showAll')
   }
 }
@@ -127,7 +141,7 @@ function filterCompleted () {
     if (!checkboxes[i].checked) {
       checkboxes[i].parentElement.style.display = 'none'
     } else {
-      checkboxes[i].parentElement.style.display = 'list-item'
+      checkboxes[i].parentElement.style.display = 'flex'
     }
   }
   console.log('filterCompleted')
